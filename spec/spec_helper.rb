@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
-require "rails/db/dump"
+require "bundler"
+
+Bundler.require :default, :development
+
+Combustion.initialize! :all
+
+require "rspec/rails"
+require "dumpcar"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -11,5 +18,14 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.include ActiveSupport::Testing::TimeHelpers
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
   end
 end

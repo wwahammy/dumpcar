@@ -1,0 +1,6 @@
+test:
+  adapter:  postgresql
+  host: db
+  database: dumpcar_test
+  password: postgres
+  username: postgres
