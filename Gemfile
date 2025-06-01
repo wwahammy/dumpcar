@@ -10,8 +10,6 @@ gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0"
 gem "shoulda-matchers"
-gem "bigdecimal" # needed on 3.4+
-gem "mutex_m" # needed on 3.4+
 
 gem "standard", "~> 1.3"
 
