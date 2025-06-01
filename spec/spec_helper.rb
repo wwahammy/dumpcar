@@ -4,7 +4,7 @@ require "bundler"
 
 Bundler.require :default, :development
 
-Combustion.initialize! :all
+Combustion.initialize! :active_record
 
 require "rspec/rails"
 require "dumpcar"
