@@ -63,16 +63,16 @@ jobs:
         ports:
           # Maps tcp port 5432 on service container to the host
           - 5432:5432
+    env:
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/rails_${{ matrix.rails }}.gemfile
 
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Ruby ${{ matrix.ruby }}
+      - name: Set up Ruby ${{ matrix.ruby }} for Rails ${{ matrix.rails }}
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-      - name: Install bundle
-        run: bin/appraisal install
       - name: Run rspec on Rails ${{ matrix.rails }}
         run: bin/appraisal rails-${{ matrix.rails }} rspec
         env:
