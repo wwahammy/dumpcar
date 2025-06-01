@@ -1,132 +1,36 @@
-# Contributor Covenant Code of Conduct
+Code of Conduct
+===============
 
-## Our Pledge
+Preface
+-------
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, caste, color, religion, or sexual
-identity and orientation.
+The Dumpcar project intends to be collaborative project that aims to unify the efforts of many individual contributors, whether they are contributing glue work, documentation, process, code, or other kinds of labor not explicitly included, into a coherent *instrument* that is accessible to the public and experts alike and remains such for as long as it is feasible. The continued existence of such an instrument is indelibly tied to the existence of a community caring for and maintaining it; this community achieving it by the individuals accepting shared values and goals to become more than the sum of the parts.
 
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+Argument
+--------
 
-## Our Standards
+1. The Dumpcar project was started by a queer person; queer people existing perpetually on the fringes of what is acceptable. Aspirationally, this is _a space for queer people_. If you are not, please be our guest; it will be built in the open for your benefit, no matter who you are, and share our knowledge, expertise, and skill freely. Do treat us like the agents we are; we will tell you in private if you seem not to, and we will ask you to leave if that fails.
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+2. The project is built in the open and distributed because we want society as a whole to benefit from this work. This does not mean, however, that we willfully turn a blind eye to the outcomes of our work. You will always have what the law says you do, but you may end up with not much more than that. For example, both ordinary contributors and project leaders may give you no quarter if you work to spill the blood of the innocent. We will explain our reasoning.
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the overall
-  community
+3. The spaces of the project exist foremost to advance its goals, which are both technical and social in nature. That does not mean that all discussion must be free of raw emotion and sensitive topics. However, if your approach to communication ends up persistently disruptive or creates a hostile environment, we will privately ask you to reconsider, and we will ask you to leave if that fails.
 
-Examples of unacceptable behavior include:
+4. For the avoidance of doubt, we have virtually no tolerance for: sexism, misogyny, racism, xenophobia, homophobia, transphobia, queerphobia, pluralphobia, stalking, harassment, unwelcome sexual advances of any kind, doxing, direct violation of non-consent, general bigotry. (This includes egregious off-space behavior if it appears relevant.) Do not post anything that can be reasonably anticipated to cause legal issues for the project. Avoid sexualized language and imagery to keep our spaces suitable for minors and survivors. In severe cases, these actions may result in an immediate ban.
 
-* The use of sexualized language or imagery, and sexual attention or advances of
-  any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email address,
-  without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+5. Project leaders have a noticeable degree of influence on the behavior of community members and as such are partially responsible for the community as a whole.
 
-## Enforcement Responsibilities
+Resolution
+----------
 
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
+Where feasible, we encourage resolution of interpersonal conflict through private communication. Where that fails or is inapplicable due to the nature of the issue, instances of unacceptable behavior may be reported to any of the project leaders, who are currently:
 
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for moderation
-decisions when appropriate.
+* Eric [@wwahammy]
 
-## Scope
+Project leaders are obliged to respect the privacy and security of the reporter and promptly investigate all reports. To the best of our ability, we will address them fairly and proportionally.
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official email address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+[@wwahammy]: mailto:eric@wwahammy.com
 
-## Enforcement
+Credits
+----------
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-[INSERT CONTACT METHOD].
-All complaints will be reviewed and investigated promptly and fairly.
-
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
-
-## Enforcement Guidelines
-
-Community leaders will follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
-
-### 1. Correction
-
-**Community Impact**: Use of inappropriate language or other behavior deemed
-unprofessional or unwelcome in the community.
-
-**Consequence**: A private, written warning from community leaders, providing
-clarity around the nature of the violation and an explanation of why the
-behavior was inappropriate. A public apology may be requested.
-
-### 2. Warning
-
-**Community Impact**: A violation through a single incident or series of
-actions.
-
-**Consequence**: A warning with consequences for continued behavior. No
-interaction with the people involved, including unsolicited interaction with
-those enforcing the Code of Conduct, for a specified period of time. This
-includes avoiding interactions in community spaces as well as external channels
-like social media. Violating these terms may lead to a temporary or permanent
-ban.
-
-### 3. Temporary Ban
-
-**Community Impact**: A serious violation of community standards, including
-sustained inappropriate behavior.
-
-**Consequence**: A temporary ban from any sort of interaction or public
-communication with the community for a specified period of time. No public or
-private interaction with the people involved, including unsolicited interaction
-with those enforcing the Code of Conduct, is allowed during this period.
-Violating these terms may lead to a permanent ban.
-
-### 4. Permanent Ban
-
-**Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior, harassment of an
-individual, or aggression toward or disparagement of classes of individuals.
-
-**Consequence**: A permanent ban from any sort of public interaction within the
-community.
-
-## Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.1, available at
-[https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
-
-Community Impact Guidelines were inspired by
-[Mozilla's code of conduct enforcement ladder][Mozilla CoC].
-
-For answers to common questions about this code of conduct, see the FAQ at
-[https://www.contributor-covenant.org/faq][FAQ]. Translations are available at
-[https://www.contributor-covenant.org/translations][translations].
-
-[homepage]: https://www.contributor-covenant.org
-[v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
-[Mozilla CoC]: https://github.com/mozilla/diversity
-[FAQ]: https://www.contributor-covenant.org/faq
-[translations]: https://www.contributor-covenant.org/translations
+This document is based upon the Code of Conduct from the [Glasgow Embedded Project](https://github.com/GlasgowEmbedded/glasgow) [Code of Conduct](https://github.com/GlasgowEmbedded/glasgow/blob/3c257d84c9915d48918a4d019194d329a1be34ac/CODE_OF_CONDUCT.md).
