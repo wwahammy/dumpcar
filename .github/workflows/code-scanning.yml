@@ -1,5 +1,5 @@
-# License: LGPL-3.0-or-later
-# based on the Rubocop code scanning template from GithubS
+# based on the Rubocop code scanning template from Github and from CommitChange's fork of Houdini Project 
+# (https://github.com/CommitChange/houdini/pull/1187)
 name: "Run Standardrb"
 
 on:
