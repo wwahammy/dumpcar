@@ -12,8 +12,6 @@ on:
 jobs:
   standardrb:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
     
     permissions:
       contents: read
@@ -25,7 +23,6 @@ jobs:
 
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
 
     # This step is not necessary if you add the gem to your Gemfile
