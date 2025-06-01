@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: "ubuntu:latest" 
+    container: "./.devcontainer/Dockerfile" 
     name: Ruby ${{ matrix.ruby }}
     strategy:
       fail-fast: false
