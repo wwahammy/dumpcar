@@ -22,3 +22,34 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Houdini Project:
+
+You can copy, convey, propagate, redistribute and/or modify this program
+under the terms of the GNU General Public License (GPL) as published by
+the Free Software Foundation (FSF), either version 3 of the License, or
+(at your option) any later version of the GPL published by the FSF.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public
+License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program in a file in the toplevel directory called
+"GPL-3.0.txt".  If not, see <http://www.gnu.org/licenses/>.
+
+In addition to the permission granted by the GPLv3, you also receive
+permissions as written in GNU Lesser General Public License (LGPL),
+Version 3.0, as published by the Free Software Foundation (FSF), either
+version 3 of the License, or (at your option) any later version of the
+LGPL published by the FSF.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program in a file in the toplevel directory called
+"LGPL-3.0.txt".  If not, see <http://www.gnu.org/licenses/>.
