@@ -43,12 +43,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Ruby
+      - name: Set up Ruby ${{ matrix.ruby }}
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-      - name: Run the default task
-        run: bundle exec rake
+      - name: Install bundle
+        run: bin/appraisal install
+      - name: Run rspec
+        run: bin/appraisal rspec
         env:
           DB_HOST: localhost
