@@ -18,3 +18,5 @@ gem "combustion"
 gem "pg"
 
 gem "rspec-rails"
+
+gem "appraisal", "~> 2.0"
