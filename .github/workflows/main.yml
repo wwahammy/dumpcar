@@ -23,12 +23,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          apt-get update && export DEBIAN_FRONTEND=noninteractive \
-          && apt-get -y install --no-install-recommends postgresql-common \
-          && /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y \
-          && apt-get -y install --no-install-recommends postgresql-client-15
-          && apt-get -y install --no-install-recommends git
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
