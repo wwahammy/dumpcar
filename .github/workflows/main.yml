@@ -66,13 +66,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Ruby ${{ matrix.ruby }}
+      - name: Set up Ruby ${{ matrix.ruby }} for Rails ${{ matrix.rails }}
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-      - name: Install bundle
-        run: bin/appraisal install
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/rails-${{ matrix.rails }}.gemfile
       - name: Run rspec on Rails ${{ matrix.rails }}
         run: bin/appraisal rails-${{ matrix.rails }} rspec
         env:
