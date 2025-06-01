@@ -11,3 +11,7 @@
 .rspec_status
 
 Gemfile.lock
+
+# Appraisal files to ignore
+/gemfiles/*.lock
+/gemfiles/.bundle
