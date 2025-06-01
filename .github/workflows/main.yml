@@ -31,10 +31,14 @@ jobs:
             rails: 6.0
           - ruby: 3.4
             rails: 6.1
+          - ruby: 3.4
+            rails: 7.0
           - ruby: head
             rails: 6.0
           - ruby: head
             rails: 6.1
+          - ruby: head
+            rails: 7.0
           
         
     permissions:
