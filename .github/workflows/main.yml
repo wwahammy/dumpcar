@@ -72,7 +72,7 @@ jobs:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
         env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/rails-${{ matrix.rails }}.gemfile
+          BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/rails_${{ matrix.rails }}.gemfile
       - name: Run rspec on Rails ${{ matrix.rails }}
         run: bin/appraisal rails-${{ matrix.rails }} rspec
         env:
