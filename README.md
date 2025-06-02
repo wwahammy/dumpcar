@@ -1,10 +1,8 @@
-# Rails::Db::Dump
+# Dumpcar
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dumpcar`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
-
-TODO: Replace `Dumpcar` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
 
 Install the gem and add to the application's Gemfile by executing:
 
