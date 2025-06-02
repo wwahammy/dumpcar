@@ -7,7 +7,7 @@ Rake tasks for dumping and restoring the contents of the PostgreSQL database for
 
 ## Installation
 
-Install the gem executing:*
+Install the gem executing:
 
 ```bash
 bundle add Dumpcar
@@ -18,9 +18,6 @@ rails g dumpcar # creates db/dumps folder, adds it to .gitignore and commits
 
 ```bash
 rails dumpcar:dump # creates a postgresql dump based on current time like db/dumps/20250601022124.dump
-```
-
-```bash
 rails dumpcar:restore # restores the last dump made chronologically from the db/dumps directory
 ```
 
