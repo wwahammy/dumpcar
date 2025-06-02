@@ -55,3 +55,8 @@ The gem is available as open source under the terms of the [LGPL-3.0-or-later li
 ## Code of Conduct
 
 Everyone interacting in the Dumpcar project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/wwahammy/dumpcar/blob/main/CODE_OF_CONDUCT.md).
+
+## Releasing
+
+1. Update the version in the `lib/dumpcar/version.rb`
+2. Run the Push Gem workflow
