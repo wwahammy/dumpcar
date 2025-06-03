@@ -1,5 +1,6 @@
 RSpec.describe Dumpcar::Location do
-  let(:first_dump_regex) { /.+\/20250601022124.*.dump/ }
+  let(:first_dump_timestamp) { 20250601022124 }
+  let(:first_dump_regex) { /.+\/#{first_dump_timestamp}.*.dump/ }
   let(:last_dump_regex) { /.+\/20250601022144.*.dump/ }
   let(:base_dir) { Rails.root.join("db/dumps") }
   subject(:location) { described_class.new(base_dir) }
@@ -18,11 +19,25 @@ RSpec.describe Dumpcar::Location do
   describe "#dumps" do
     it "returns 2 items" do
       expect(location.dumps.count).to eq 2
-      expect(location.dumps.first).to match(first_dump_regex)
-      expect(location.dumps.last).to match(last_dump_regex)
+      expect(location.dumps.first.to_s).to match(first_dump_regex)
+      expect(location.dumps.last.to_s).to match(last_dump_regex)
     end
 
     it "properly generates the base dir before if missing"
+  end
+
+  describe "#search " do
+    it "gets the proper item with a full search" do
+      expect(location.search(first_dump_timestamp).to_s).to match(first_dump_regex)
+    end
+
+    it "gets the proper item with a partial search" do
+      expect(location.search(first_dump_timestamp[0..6]).to_s).to match(first_dump_regex)
+    end
+
+    it "gets nil when no valid item exists" do
+      expect(location.search(1919).to_s).to match(first_dump_regex)
+    end
   end
 
   describe "#next" do
