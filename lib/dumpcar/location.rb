@@ -20,7 +20,7 @@ module Dumpcar
     end
 
     def search(query)
-      dumps.first {|file| file.basename.starts_with(query)}
+      dumps.first { |file| file.basename.starts_with(query) }
     end
 
     def last

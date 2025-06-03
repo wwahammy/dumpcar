@@ -28,15 +28,15 @@ RSpec.describe Dumpcar::Location do
 
   describe "#search " do
     it "gets the proper item with a full search" do
-       expect(location.search(first_dump_timestamp).to_s).to match(first_dump_regex)
+      expect(location.search(first_dump_timestamp).to_s).to match(first_dump_regex)
     end
 
     it "gets the proper item with a partial search" do
-       expect(location.search(first_dump_timestamp[0..6]).to_s).to match(first_dump_regex)
+      expect(location.search(first_dump_timestamp[0..6]).to_s).to match(first_dump_regex)
     end
 
     it "gets nil when no valid item exists" do
-       expect(location.search(1919).to_s).to match(first_dump_regex)
+      expect(location.search(1919).to_s).to match(first_dump_regex)
     end
   end
 
