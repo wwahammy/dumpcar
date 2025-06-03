@@ -11,12 +11,16 @@ module Dumpcar
 
     def dumps
       prepare_base!
-      Dir.glob(base.join(TIMESTAMP_FILE_GLOB))
+      base.glob(TIMESTAMP_FILE_GLOB)
     end
 
     def first
       prepare_base!
       dumps.first
+    end
+
+    def search(query)
+      dumps.first {|file| file.basename.starts_with(query)}
     end
 
     def last
