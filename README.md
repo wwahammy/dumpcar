@@ -2,8 +2,8 @@
 
 Rake tasks for dumping and restoring the contents of the PostgreSQL database for your Rails application.
 
-* Dump (`rails dumpcar:dump`) and restore your last dump (`rails dumpcar:restore`) with a single command
-* Uses your Rails database credentials for your environment
+- Dump (`rails dumpcar:dump`) and restore your last dump (`rails dumpcar:restore`) with a single command
+- Uses your Rails database credentials for your environment
 
 ## Installation
 
@@ -27,15 +27,15 @@ Outside of the `rails dumpcar:dump` and `rails dumpcar:restore` commands, don't 
 
 ## Longer term feature goals
 
-* Support other Rails database (MySQL and SQLite)
-* Support other Rails environments than the current one
-* Ability to clean your db/dumps directory of all dumps before a given time
-* Add support for naming a dump (you can manually do this now but not via the rake task)
-* Restoring a specific dump via filepath
-* Restoring a specific dump by timestamp
-* Restoring a specific dump by name
-* Restoring a specific dump made before or after a given time
-* Extension points for other ways to get a database (Easily get a dump from Heroku's Postgres backups, for example)
+- Support other Rails database (MySQL and SQLite)
+- Support other Rails environments than the current one
+- Ability to clean your db/dumps directory of all dumps before a given time
+- Add support for naming a dump (you can manually do this now but not via the rake task)
+- Restoring a specific dump via filepath
+- Restoring a specific dump by timestamp
+- Restoring a specific dump by name
+- Restoring a specific dump made before or after a given time
+- Extension points for other ways to get a database (Easily get a dump from Heroku's Postgres backups, for example)
 
 ## Development
 

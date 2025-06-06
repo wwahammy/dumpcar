@@ -1,44 +1,44 @@
-# based on the Rubocop code scanning template from Github and from CommitChange's fork of Houdini Project 
+# based on the Rubocop code scanning template from Github and from CommitChange's fork of Houdini Project
 # (https://github.com/CommitChange/houdini/pull/1187)
 name: "Run Standardrb"
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
   schedule:
-    - cron: '19 23 * * 1'
+    - cron: "19 23 * * 1"
 
 jobs:
   standardrb:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: read
       security-events: write
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - uses: ruby/setup-ruby@v1
-      with:
-        bundler-cache: true
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
 
-    # This step is not necessary if you add the gem to your Gemfile
-    - name: Install Code Scanning integration
-      run: bundle add code-scanning-rubocop --version 0.6.1 --skip-install
+      # This step is not necessary if you add the gem to your Gemfile
+      - name: Install Code Scanning integration
+        run: bundle add code-scanning-rubocop --version 0.6.1 --skip-install
 
-    - name: Install dependencies
-      run: bundle install
+      - name: Install dependencies
+        run: bundle install
 
-    - name: Standardrb run
-      run: |
-        bash -c "
-          bin/standardrb --require code_scanning --format CodeScanning::SarifFormatter -o standard.sarif
-          [[ $? -ne 2 ]]
-        "
-    - name: Upload Sarif output
-      uses: github/codeql-action/upload-sarif@v3
-      with:
-        sarif_file: standard.sarif
+      - name: Standardrb run
+        run: |
+          bash -c "
+            bin/standardrb --require code_scanning --format CodeScanning::SarifFormatter -o standard.sarif
+            [[ $? -ne 2 ]]
+          "
+      - name: Upload Sarif output
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: standard.sarif
