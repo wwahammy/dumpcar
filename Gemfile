@@ -23,3 +23,5 @@ gem "pg"
 gem "rspec-rails"
 
 gem "appraisal", "~> 2.0"
+
+gem "debug"
