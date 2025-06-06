@@ -8,7 +8,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*": "prettier --write",
+    "*.{js,css,md,yml}": "prettier --write",
     "*.{rb,rake,gemspec,ru}": "bin/standardrb --fix",
     "Gemfile": "bin/standardrb --fix"
   }
