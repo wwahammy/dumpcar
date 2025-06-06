@@ -1,12 +1,14 @@
 {
   "devDependencies": {
     "husky": "^9.0",
-    "lint-staged": "^16.0"
+    "lint-staged": "^16.0",
+    "prettier": "^3.0"
   },
   "scripts": {
     "prepare": "husky"
   },
   "lint-staged": {
+    "*": "prettier --write",
     "*.{rb,rake,gemspec,ru}": "bin/standardrb --fix",
     "Gemfile": "bin/standardrb --fix"
   }

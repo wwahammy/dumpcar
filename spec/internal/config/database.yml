@@ -1,5 +1,5 @@
 test:
-  adapter:  postgresql
+  adapter: postgresql
   host: <%= ENV.fetch('DB_HOST') { 'db '} %>
   database: dumpcar_test
   password: postgres

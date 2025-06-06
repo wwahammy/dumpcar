@@ -15,7 +15,6 @@ jobs:
       id-token: write
 
     steps:
-
       - uses: actions/checkout@v4
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -27,4 +26,3 @@ jobs:
       - uses: rubygems/release-gem@v1 # v1
       - name: Create releases
         uses: softprops/action-gh-release@v2
-        
