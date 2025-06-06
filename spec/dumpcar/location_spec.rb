@@ -1,7 +1,7 @@
 RSpec.describe Dumpcar::Location do
   let(:first_dump_timestamp) { 20250601022124 }
   let(:first_dump_regex) { /.+\/#{first_dump_timestamp}.*.dump/ }
-  let(:last_dump_regex) { /.+\/20250601022144.*.dump/ }
+  let(:last_dump_regex) { /.+\/20250606202909.*.dump/ }
   let(:base_dir) { Rails.root.join("db/dumps") }
   subject(:location) { described_class.new(base_dir) }
 
@@ -17,8 +17,8 @@ RSpec.describe Dumpcar::Location do
   end
 
   describe "#dumps" do
-    it "returns 2 items" do
-      expect(location.dumps.count).to eq 2
+    it "returns 3 items" do
+      expect(location.dumps.count).to eq 3
       expect(location.dumps.first.to_s).to match(first_dump_regex)
       expect(location.dumps.last.to_s).to match(last_dump_regex)
     end
