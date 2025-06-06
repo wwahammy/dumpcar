@@ -47,7 +47,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/wwaham
 
 ## License
 
-The gem is available as open source under the terms of the [LGPL-3.0-or-later license](https://github.com/wwahammy/dumpcar/blob/LICENSE).
+The gem is available as open source under the terms of the [LGPL-3.0-or-later license](https://github.com/wwahammy/dumpcar/blob/main/LICENSE).
 
 ## Code of Conduct
 
