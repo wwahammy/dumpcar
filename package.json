@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{rb,rake,gemspec,ru}": "bin/standardrb --fix",
+    "Gemfile": "bin/standardrb --fix"
+  }
+}
