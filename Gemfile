@@ -5,6 +5,8 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in dumpcar.gemspec
 gemspec
 
+gem "aruba", "~> 2.3"
+
 gem "irb"
 gem "rake", "~> 13.0"
 
