@@ -24,6 +24,6 @@ gem "pg"
 
 gem "rspec-rails"
 
-gem "appraisal", "~> 2.0"
+gem "appraisal", git: "https://github.com/pboling/appraisal.git", ref: "c353e3ee3105a3db8aab49d51df8c159959165a0" # Until https://github.com/thoughtbot/appraisal/pull/248 is merged
 
 gem "debug"
