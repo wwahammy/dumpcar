@@ -27,6 +27,17 @@ RSpec.configure do |config|
     require "rspec/github"
     config.add_formatter RSpec::Github::Formatter
   end
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
+  end
 end
 
 Shoulda::Matchers.configure do |config|
