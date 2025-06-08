@@ -44,7 +44,7 @@ RSpec.describe "Console", type: :aruba do
 
       run_command(rails_command("dumpcar:restore --base=#{working_dir.pathname}"))
       expect(last_command_started).to be_successfully_executed
-
+      sleep(5)
       expect(SimpleObject.count).to eq 1
     end
   end
