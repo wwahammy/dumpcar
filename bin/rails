@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# allows us to interact with combustion managed Rails application
+require "bundler"
+
+Bundler.require :default, :development
+APP_PATH = File.expand_path('../lib/dumpcar', __dir__)
+
+Combustion.initialize! :active_record, 
+  database_reset: false, # we don't want to reset the database when we start up
+  load_schema: false # we don't want to reload the database schema when we start up
+
+
+require "rails/commands"
+
