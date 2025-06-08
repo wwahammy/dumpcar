@@ -1,7 +1,12 @@
+require "active_model"
 module Dumpcar
   class Instance
-    attr_reader :location, :pg
-    def initialize(base: Rails.root.join("db/dumps"), connection: ActiveRecord::Base.connection_db_config.configuration_hash)
+    include ActiveModel::Model
+
+    attr_accessor :connection, :location, :pg, :base
+    def initialize(attributes = {})
+      cleanup_arguments(attributes)
+      @connection = ActiveRecord::Base.connection_db_config.configuration_hash
       @location = Location.new(base)
       @pg = Pg.new(connection)
     end
@@ -12,6 +17,15 @@ module Dumpcar
 
     def restore
       @pg.restore(@location.last)
+    end
+
+    def cleanup_arguments(arguments)
+      arguments = arguments.to_h.with_indifferent_access
+      unless arguments.has_key?("base")
+        arguments["base"] = Rails.root.join("dumps/db")
+      end
+
+      assign_attributes(arguments)
     end
   end
 end
