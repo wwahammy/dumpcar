@@ -14,6 +14,9 @@ RSpec.describe "Console", type: :aruba do
 
   around(:each, type: :aruba) do |ex|
     prepare_working_dir
+    if ENV["BUNDLE_GEMFILE"]
+      set_environment_variable("BUNDLE_GEMFILE", ENV["BUNDLE_GEMFILE"])
+    end
     ex.run
   end
 
