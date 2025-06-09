@@ -22,7 +22,7 @@ module Dumpcar
     def cleanup_arguments(arguments)
       arguments = arguments.to_h.with_indifferent_access
       unless arguments.has_key?("base")
-        arguments["base"] = Rails.root.join("dumps/db")
+        arguments["base"] = Rails.root.join("db/dumps")
       end
 
       assign_attributes(arguments)
