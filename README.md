@@ -10,7 +10,7 @@ Rake tasks for dumping and restoring the contents of the PostgreSQL database for
 Install the gem executing:
 
 ```bash
-bundle add Dumpcar
+bundle add dumpcar
 rails g dumpcar # creates db/dumps folder, adds it to .gitignore and commits
 ```
 
