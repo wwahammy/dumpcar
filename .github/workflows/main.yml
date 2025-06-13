@@ -76,3 +76,14 @@ jobs:
         run: bin/appraisal rails-${{ matrix.rails }} rspec
         env:
           DB_HOST: localhost
+  validate-dev-container:
+    runs-on: ubuntu-latest
+    name: Validate Devcontainer
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run dev container task
+        uses: devcontainers/ci@v0.3
+        with:
+          runCmd: echo "If we got here, the devcontainer built successfully!"
