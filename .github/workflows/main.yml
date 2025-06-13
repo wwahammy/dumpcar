@@ -77,7 +77,7 @@ jobs:
         env:
           DB_HOST: localhost
   validate-dev-container:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     name: Validate Devcontainer
     permissions:
       contents: read
