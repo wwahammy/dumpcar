@@ -79,6 +79,8 @@ jobs:
   validate-dev-container:
     runs-on: ubuntu-latest
     name: Validate Devcontainer
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Build and run dev container task
