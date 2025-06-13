@@ -1,9 +1,9 @@
 module Dumpcar
   class Instance
     attr_reader :location, :pg
-    def initialize(base: Rails.root.join("db/dumps"), connection: ActiveRecord::Base.connection_db_config.configuration_hash)
+    def initialize(base: Rails.root.join("db/dumps"))
       @location = Location.new(base)
-      @pg = Pg.new(connection)
+      @pg = Pg.new(get_connection_db_config)
     end
 
     def dump
@@ -12,6 +12,12 @@ module Dumpcar
 
     def restore
       @pg.restore(@location.last)
+    end
+
+    private
+
+    def get_connection_db_config
+      (Rails.version < "6.1") ? ActiveRecord::Base.connection_config : ActiveRecord::Base.connection_db_config.configuration_hash
     end
   end
 end
