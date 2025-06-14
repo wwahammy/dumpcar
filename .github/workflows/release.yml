@@ -24,5 +24,3 @@ jobs:
 
       # Release
       - uses: rubygems/release-gem@v1 # v1
-      - name: Create releases
-        uses: softprops/action-gh-release@v2
