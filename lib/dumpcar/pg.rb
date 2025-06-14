@@ -9,9 +9,12 @@ module Dumpcar
     def restore(filename)
       with_database_config do |config|
         config => {password:, host:, port:, username:, database:}
-        result = "PGPASSWORD=#{password} pg_restore --verbose --clean --no-acl --no-owner -h #{host} -U #{username} -d #{database} -p #{port} #{filename}"
-        puts result
-        `#{result} `
+        line = Terrapin::CommandLine.new("pg_restore",
+          "--verbose --clean --no-acl --no-owner -h :host -U :username -d :database -p :port :filename",
+          environment: {"PGPASSWORD" => password})
+
+        puts line.command(password:, host:, port:, username:, database:)
+        line.run(password:, host:, port:, username:, database:)
       end
     end
 
