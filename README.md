@@ -57,3 +57,4 @@ Everyone interacting in the Dumpcar project's codebases, issue trackers, chat ro
 
 1. Update the version in the `lib/dumpcar/version.rb`
 2. Run the Push Gem workflow
+3. Create a new release from the UI for the new tag
