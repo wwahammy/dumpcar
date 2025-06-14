@@ -3,6 +3,7 @@ module Dumpcar
     attr_reader :connection
 
     def initialize(connection)
+      require "terrapin"
       @connection = connection
     end
 
@@ -13,8 +14,8 @@ module Dumpcar
           "--verbose --clean --no-acl --no-owner -h :host -U :username -d :database -p :port :filename",
           environment: {"PGPASSWORD" => password})
 
-        puts line.command(password:, host:, port:, username:, database:)
-        line.run(password:, host:, port:, username:, database:)
+        puts line.command(password:, host:, port:, username:, database:, filename:)
+        line.run(password:, host:, port:, username:, database:, filename:)
       end
     end
 
