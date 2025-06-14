@@ -22,9 +22,11 @@ module Dumpcar
     def dump(filename)
       with_database_config do |config|
         config => {password:, host:, port:, username:, database:}
-        result = "PGPASSWORD=#{password} pg_dump --host #{host} --port #{port} --username #{username} --clean --format=c --create  --if-exists --no-owner --no-acl #{database} --file=#{filename}"
-        puts result
-        `#{result} `
+        line = Terrapin::CommandLine.new("pg_dump",
+          "--host :host  --port :port --username :username --clean --format=c --create  --if-exists --no-owner --no-acl :database --file=:filename",
+          environment: {"PGPASSWORD" => password})
+        puts line.command(password:, host:, port:, username:, database:, filename:)
+        line.run(password:, host:, port:, username:, database:, filename:)
       end
     end
 
