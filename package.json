@@ -9,7 +9,7 @@
   },
   "lint-staged": {
     "*.{js,css,md,yml}": "prettier --write",
-    "*.{rb,rake,gemspec,ru,gemfile}": "bin/standardrb --fix",
+    "*.{rb,rake,gemspec,ru}": "bin/standardrb --fix",
     "Gemfile": "bin/standardrb --fix"
   }
 }
