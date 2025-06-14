@@ -1,5 +1,7 @@
 # Dumpcar
 
+[![Ruby Gem version](https://badge.fury.io/rb/dumpcar.svg)](https://rubygems.org/gems/dumpcar)
+
 Rake tasks for dumping and restoring the contents of the PostgreSQL database for your Rails application.
 
 - Dump (`rails dumpcar:dump`) and restore your last dump (`rails dumpcar:restore`) with a single command
@@ -10,7 +12,7 @@ Rake tasks for dumping and restoring the contents of the PostgreSQL database for
 Install the gem executing:
 
 ```bash
-bundle add Dumpcar
+bundle add dumpcar
 rails g dumpcar # creates db/dumps folder, adds it to .gitignore and commits
 ```
 
@@ -57,3 +59,4 @@ Everyone interacting in the Dumpcar project's codebases, issue trackers, chat ro
 
 1. Update the version in the `lib/dumpcar/version.rb`
 2. Run the Push Gem workflow
+3. Create a new release from the UI for the new tag

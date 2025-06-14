@@ -6,7 +6,7 @@ module Dumpcar
     attr_accessor :connection, :location, :pg, :base
     def initialize(attributes = {})
       cleanup_arguments(attributes)
-      @connection = ActiveRecord::Base.connection_db_config.configuration_hash
+      @connection = get_connection_db_config
       @location = Location.new(base)
       @pg = Pg.new(connection)
     end
@@ -26,6 +26,12 @@ module Dumpcar
       end
 
       assign_attributes(arguments)
+    end
+
+    private
+
+    def get_connection_db_config
+      (Rails.version < "6.1") ? ActiveRecord::Base.connection_config : ActiveRecord::Base.connection_db_config.configuration_hash
     end
   end
 end

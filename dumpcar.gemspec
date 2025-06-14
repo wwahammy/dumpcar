@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Eric Schultz"]
   spec.email = ["eric@wwahammy.com"]
 
-  spec.summary = "Rake tasks for dumping and restoring Rails PostgreSQL database contents"
+  spec.summary = "Commands for dumping and restoring Rails PostgreSQL database contents"
   # spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = "https://github.com/wwahammy/dumpcar"
   spec.license = "LGPL-3.0-or-later"
@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "rails", ">= 6"
+  spec.add_dependency "terrapin", ">= 1"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
