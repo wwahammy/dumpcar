@@ -12,9 +12,8 @@ module Dumpcar
         config => {password:, host:, port:, username:, database:}
         line = Terrapin::CommandLine.new("pg_restore",
           "--verbose --clean --no-acl --no-owner -h :host -U :username -d :database -p :port :filename",
-          environment: {"PGPASSWORD" => password})
-
-        puts line.command(password:, host:, port:, username:, database:, filename:)
+          environment: {"PGPASSWORD" => password},
+          logger:)
         line.run(password:, host:, port:, username:, database:, filename:)
       end
     end
@@ -24,14 +23,18 @@ module Dumpcar
         config => {password:, host:, port:, username:, database:}
         line = Terrapin::CommandLine.new("pg_dump",
           "--host :host  --port :port --username :username --clean --format=c --create  --if-exists --no-owner --no-acl :database --file=:filename",
-          environment: {"PGPASSWORD" => password})
-        puts line.command(password:, host:, port:, username:, database:, filename:)
+          environment: {"PGPASSWORD" => password},
+          logger:)
         line.run(password:, host:, port:, username:, database:, filename:)
       end
     end
 
     def with_database_config
       yield self.class.defaults.merge(connection)
+    end
+
+    def logger
+      Dumpcar::Util.logger
     end
 
     def self.defaults
