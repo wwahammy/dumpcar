@@ -5,15 +5,30 @@ RSpec.describe Dumpcar::Location do
   let(:base_dir) { Rails.root.join("db/dumps") }
   subject(:location) { described_class.new(base_dir) }
 
+  shared_examples "a base folder creator" do
+    let(:new_folder) { Rails.root.join("tmp/#{Random.uuid}") }
+    subject(:location) { described_class.new(new_folder) }
+
+    it "autocreates the base folder when missing" do
+      expect(new_folder).to_not be_exist
+      method_to_test
+      expect(new_folder).to be_exist
+    end
+  end
+
   describe "#first" do
     it { is_expected.to delegate_method(:first).to(:dumps) }
 
-    it "properly generates the base dir before if missing"
+    it_behaves_like "a base folder creator" do
+      let(:method_to_test) { location.first }
+    end
   end
 
   describe "#last" do
     it { is_expected.to delegate_method(:last).to(:dumps) }
-    it "properly generates the base dir before if missing"
+    it_behaves_like "a base folder creator" do
+      let(:method_to_test) { location.last }
+    end
   end
 
   describe "#dumps" do
@@ -23,7 +38,9 @@ RSpec.describe Dumpcar::Location do
       expect(location.dumps.last.to_s).to match(last_dump_regex)
     end
 
-    it "properly generates the base dir before if missing"
+    it_behaves_like "a base folder creator" do
+      let(:method_to_test) { location.dumps }
+    end
   end
 
   describe "#search " do
@@ -46,6 +63,9 @@ RSpec.describe Dumpcar::Location do
         expect(location.next).to eq base_dir.join("20200103040506.dump").to_s
       end
     end
-    it "properly generates the base dir before if missing"
+
+    it_behaves_like "a base folder creator" do
+      let(:method_to_test) { location.next }
+    end
   end
 end
