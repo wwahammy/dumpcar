@@ -1,6 +1,6 @@
 # Dumpcar
 
-[![Ruby Gem version](https://badge.fury.io/rb/dumpcar.svg)](https://rubygems.org/gems/dumpcar)
+[![Ruby Gem version](https://badge.fury.io/rb/dumpcar.svg)](https://rubygems.org/gems/dumpcar) [![Ruby build](https://github.com/wwahammy/dumpcar/actions/workflows/main.yml/badge.svg)](https://github.com/wwahammy/dumpcar/actions/workflows/main.yml)
 
 Rails commands for dumping and restoring the contents of the PostgreSQL database for your Rails application.
 
