@@ -9,7 +9,7 @@ Rake tasks for dumping and restoring the contents of the PostgreSQL database for
 
 ## Installation
 
-Install the gem executing:
+Install the gem by executing:
 
 ```bash
 bundle add dumpcar
