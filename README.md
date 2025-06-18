@@ -2,7 +2,7 @@
 
 [![Ruby Gem version](https://badge.fury.io/rb/dumpcar.svg)](https://rubygems.org/gems/dumpcar)
 
-Rake tasks for dumping and restoring the contents of the PostgreSQL database for your Rails application.
+Rails commands for dumping and restoring the contents of the PostgreSQL database for your Rails application.
 
 - Dump (`rails dumpcar:dump`) and restore your last dump (`rails dumpcar:restore`) with a single command
 - Uses your Rails database credentials for your environment
