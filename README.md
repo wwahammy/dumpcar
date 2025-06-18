@@ -9,7 +9,7 @@ Rails commands for dumping and restoring the contents of the PostgreSQL database
 
 ## Installation
 
-Install the gem executing:
+Install the gem by executing:
 
 ```bash
 bundle add dumpcar
