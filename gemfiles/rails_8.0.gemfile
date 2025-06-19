@@ -17,4 +17,8 @@ gem "appraisal", :git => "https://github.com/pboling/appraisal.git", :ref => "c3
 gem "debug"
 gem "rails", "~> 8.0.0"
 
+group :development do
+  gem "ruby-lsp-rspec", :require => false
+end
+
 gemspec :path => "../"

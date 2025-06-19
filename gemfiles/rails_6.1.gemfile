@@ -18,4 +18,8 @@ gem "debug"
 gem "rails", "~> 6.1.0"
 gem "concurrent-ruby", "1.3.4"
 
+group :development do
+  gem "ruby-lsp-rspec", :require => false
+end
+
 gemspec :path => "../"
