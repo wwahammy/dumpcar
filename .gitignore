@@ -18,6 +18,9 @@ Gemfile.lock
 /gemfiles/*.lock
 /gemfiles/.bundle
 
+# used by ruby-lsp
+/.ruby-lsp
+
 # built vendor/bundler files
 /vendor/bundle
 
