@@ -17,3 +17,7 @@ Gemfile.lock
 # Appraisal files to ignore
 /gemfiles/*.lock
 /gemfiles/.bundle
+
+# built vendor/bundler files
+/vendor/bundle
+

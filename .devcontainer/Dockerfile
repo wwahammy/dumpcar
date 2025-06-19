@@ -1,7 +1,5 @@
 FROM mcr.microsoft.com/devcontainers/ruby:1-3.2-bullseye
 
-# Install Rails
-RUN su vscode -c "gem install rails prism"
 RUN su vscode -c "/usr/local/rvm/bin/rvm fix-permissions"
 
 # Default value to allow debug server to serve content over GitHub Codespace's port forwarding service
