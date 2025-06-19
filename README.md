@@ -41,6 +41,9 @@ Outside of the `rails dumpcar:dump` and `rails dumpcar:restore` commands, don't 
 
 ## Development
 
+NOTE: Using the Devcontainer is one of the easiest ways to get setup. Unfortunately, it also requires a no-charge but proprietary
+extension VSCode to use.
+
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You should run `bin/appraisal rspec` to run all of the tests on all of the supported Rails versions. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 ## Contributing
