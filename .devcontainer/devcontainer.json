@@ -20,7 +20,17 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "bundle config set path vendor/bundle && bin/setup",
   // Configure tool-specific properties.
-  // "customizations": {},
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "rubyLsp.addonSettings": {
+          "Ruby LSP RSpec": {
+            "rspecCommand": "rspec -f d"
+          }
+        }
+      }
+    }
+  }
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"
