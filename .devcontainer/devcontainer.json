@@ -18,8 +18,7 @@
   // "forwardPorts": [3000, 5432],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "bin/setup"
-
+  "postCreateCommand": "bundle config set path vendor/bundle && bin/setup",
   // Configure tool-specific properties.
   // "customizations": {},
 
