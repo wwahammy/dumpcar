@@ -30,7 +30,7 @@ module Dumpcar
 
     def next
       prepare_base_dir!
-      base_dir.join(from_time + ".dump").to_s
+      base_dir.join(generate_file_name).to_s
     end
 
     def from_time(time = Time.now.utc)
@@ -41,6 +41,10 @@ module Dumpcar
 
     def prepare_base_dir!
       FileUtils.mkdir_p base_dir
+    end
+
+    def generate_file_name
+      from_time + ".dump"
     end
   end
 end
