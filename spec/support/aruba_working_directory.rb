@@ -1,9 +1,9 @@
 class ArubaWorkingDirectory
   attr_reader :pathname
   def initialize
-    @pathname = Pathname.new(Aruba.config.home_directory).join(Random.uuid)
+    @pathname = Pathname.new(Rails.root).join("tmp", Random.uuid)
     Aruba.configure do |config|
-      config.working_directory = name
+      config.home_directory = @pathname.to_s
     end
   end
 
