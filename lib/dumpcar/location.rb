@@ -4,18 +4,18 @@ module Dumpcar
     TIMESTAMP_GLOB = 14.times.map { "[0-9]" }.join
     TIMESTAMP_FILE_GLOB = TIMESTAMP_GLOB + "*.dump"
 
-    attr_reader :base
-    def initialize(base)
-      @base = Pathname.new base
+    attr_reader :base_dir
+    def initialize(base_dir)
+      @base_dir = Pathname.new base_dir
     end
 
     def dumps
-      prepare_base!
-      base.glob(TIMESTAMP_FILE_GLOB)
+      prepare_base_dir!
+      base_dir.glob(TIMESTAMP_FILE_GLOB)
     end
 
     def first
-      prepare_base!
+      prepare_base_dir!
       dumps.first
     end
 
@@ -24,13 +24,13 @@ module Dumpcar
     end
 
     def last
-      prepare_base!
+      prepare_base_dir!
       dumps.last
     end
 
     def next
-      prepare_base!
-      base.join(from_time + ".dump").to_s
+      prepare_base_dir!
+      base_dir.join(from_time + ".dump").to_s
     end
 
     def from_time(time = Time.now.utc)
@@ -39,8 +39,8 @@ module Dumpcar
 
     private
 
-    def prepare_base!
-      FileUtils.mkdir_p base
+    def prepare_base_dir!
+      FileUtils.mkdir_p base_dir
     end
   end
 end
