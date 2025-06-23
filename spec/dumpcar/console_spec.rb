@@ -24,7 +24,24 @@ RSpec.describe "Console", type: :aruba, pending: pending_rails_version? ? "This 
     ex.run
   end
 
-  describe ":dump"
+  describe ":dump" do
+    context "with base_dir" do
+      it "puts things in a different base_folder" do
+        base_dir = Pathname.new(Rails.root).join("tmp", "base_folder" + Random.uuid)
+
+        SimpleObject.create(name: "so-1")
+        run_command(rails_command("dumpcar:dump --base_dir=" + base_dir.to_s))
+
+        expect(last_command_started).to be_successfully_executed
+
+        SimpleObject.delete_all
+
+        expect(SimpleObject).to be_none
+
+        expect(base_dir.children.count).to eq 1
+      end
+    end
+  end
 
   describe ":restore" do
     it "restores the last dump by default" do
