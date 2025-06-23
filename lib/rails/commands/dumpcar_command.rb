@@ -3,12 +3,14 @@ class DumpcarCommand < Rails::Command::Base
 
   desc "dump", "Dump postgres backup file"
   def dump
+    boot_application!
     require "dumpcar"
     Dumpcar::Instance.new(options).dump
   end
 
   desc "restore", "Restore postgres backup file"
   def restore
+    boot_application!
     require "dumpcar"
     Dumpcar::Instance.new(options).restore
   end
