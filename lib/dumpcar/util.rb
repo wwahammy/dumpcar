@@ -6,4 +6,8 @@ module Dumpcar::Util
   def self.logger
     Rails.logger
   end
+
+  def self.calculate_str_name(str)
+    str.strip.downcase.tr(" ", "-").split("-").filter(&:present?).join("-")
+  end
 end
