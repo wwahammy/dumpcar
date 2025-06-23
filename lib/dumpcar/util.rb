@@ -8,6 +8,6 @@ module Dumpcar::Util
   end
 
   def self.calculate_str_name(str)
-    str.strip.downcase.tr(" ", "-").split("-").filter(&:present?).join("-")
+    str.strip.downcase.gsub(/\W/, "-").split("-").filter(&:present?).join("-")
   end
 end
