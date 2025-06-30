@@ -21,4 +21,6 @@ RSpec.describe Dumpcar::Instance do
 
     expect(SimpleObject.count).to eq 1
   end
+
+  it "gives dump a proper name when a name is passed"
 end

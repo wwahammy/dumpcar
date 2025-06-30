@@ -67,5 +67,7 @@ RSpec.describe Dumpcar::Location do
     it_behaves_like "a base folder creator" do
       let(:method_to_test) { location.next }
     end
+
+    it "generates the correct path when a name is passed"
   end
 end
