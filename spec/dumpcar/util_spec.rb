@@ -1,5 +1,5 @@
 RSpec.describe Dumpcar::Util do
-  describe "calculate_str_name" do
+  describe "calculate_dump_description" do
     [
       ["name with upper and down case", "An item with UPPER and downcase", "an-item-with-upper-and-downcase"],
       ["name with two spaces", "An  item with spaces", "an-item-with-spaces"],
@@ -7,7 +7,7 @@ RSpec.describe Dumpcar::Util do
       ["name with space with doublespace and dash", "An -item with space and Dash", "an-item-with-space-and-dash"]
     ].each do |title, input, expected|
       it "properly handles #{title}" do
-        expect(described_class.calculate_str_name(input)).to eq expected
+        expect(described_class.calculate_dump_description(input)).to eq expected
       end
     end
   end

@@ -7,7 +7,7 @@ module Dumpcar::Util
     Rails.logger
   end
 
-  def self.calculate_str_name(str)
-    str.strip.downcase.gsub(/\W/, "-").squeeze("-")
+  def self.calculate_dump_description(description)
+    description.strip.downcase.gsub(/\W/, "-").squeeze("-")
   end
 end
