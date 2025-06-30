@@ -5,7 +5,7 @@
 Rails commands for dumping and restoring the contents of the PostgreSQL database for your Rails application.
 
 - Dump (`rails dumpcar:dump`) and restore your last dump (`rails dumpcar:restore`) with a single command
-- Uses your Rails database credentials for your environment
+- Uses your Rails database credentials for your environment OR any Rails supported Postgres connection string (via `DATABASE_URL`)
 
 ## Installation
 
@@ -21,6 +21,9 @@ rails g dumpcar # creates db/dumps folder, adds it to .gitignore and commits
 ```bash
 rails dumpcar:dump # creates a postgresql dump based on current time like db/dumps/20250601022124.dump
 rails dumpcar:restore # restores the last dump made chronologically from the db/dumps directory
+
+# You can use any Postgres connection string that Rails supports
+DATABASE_URL=postgres://myuser:mypassword@domain.hosting.pg.db:5432/mydatabase rails dumpcar:dump # creates a postgresql dump of the database at DATABASE_URL
 ```
 
 ## Compatibility
