@@ -67,5 +67,11 @@ RSpec.describe Dumpcar::Location do
     it_behaves_like "a base folder creator" do
       let(:method_to_test) { location.next }
     end
+
+    it "generates the correct path when a description is passed" do
+      travel_to Time.utc(2020, 1, 3, 4, 5, 6) do
+        expect(location.next("Is a   Valid Description")).to eq base_dir.join("20200103040506-is-a-valid-description.dump").to_s
+      end
+    end
   end
 end
