@@ -32,7 +32,7 @@ Outside of the `rails dumpcar:dump` and `rails dumpcar:restore` commands, don't 
 
 ## Longer term feature goals
 
-- Support other Rails database (MySQL and SQLite)
+- Support other Rails databases (MySQL and SQLite)
 - Support other Rails environments than the current one
 - Ability to clean your db/dumps directory of all dumps before a given time
 - Add support for naming a dump (you can manually do this now but not via the rake task)
