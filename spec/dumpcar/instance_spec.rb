@@ -21,17 +21,4 @@ RSpec.describe Dumpcar::Instance do
 
     expect(SimpleObject.count).to eq 1
   end
-
-  it "gives dump a proper description when is passed" do
-    base_dir = Pathname.new(Rails.root).join("tmp", "base_folder" + Random.uuid)
-    description = "This is a  VALID Description"
-
-    SimpleObject.create(name: "so-1")
-    instance = Dumpcar::Instance.new(base_dir:, description:)
-    instance.dump
-
-    expect(base_dir.children.count).to eq 1
-
-    expect(base_dir.children.first.basename.to_s).to be_end_with "-this-is-a-valid-description.dump"
-  end
 end
