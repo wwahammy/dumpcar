@@ -6,8 +6,4 @@ module Dumpcar::Util
   def self.logger
     Rails.logger
   end
-
-  def self.calculate_dump_description(description)
-    description.strip.downcase.gsub(/\W/, "-").squeeze("-")
-  end
 end

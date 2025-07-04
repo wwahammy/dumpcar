@@ -41,10 +41,6 @@ RSpec.describe "Console", type: :aruba, pending: pending_rails_version? ? "This 
         expect(base_dir.children.count).to eq 1
       end
     end
-
-    context "with passed name" do
-      it "generates a dump name properly"
-    end
   end
 
   describe ":restore" do
