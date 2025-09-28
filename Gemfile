@@ -25,7 +25,7 @@ gem "pg"
 gem "rspec-rails"
 gem "database_cleaner-active_record"
 
-gem "appraisal", git: "https://github.com/pboling/appraisal.git", ref: "c353e3ee3105a3db8aab49d51df8c159959165a0" # Until https://github.com/thoughtbot/appraisal/pull/248 is merged
+gem "appraisal2"
 
 gem "debug"
 
