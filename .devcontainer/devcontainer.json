@@ -28,7 +28,8 @@
             "rspecCommand": "rspec -f d"
           }
         }
-      }
+      },
+      "extensions": ["redhat.vscode-yaml"]
     }
   }
 
