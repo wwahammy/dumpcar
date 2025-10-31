@@ -79,6 +79,11 @@ module TestHelpers
   end
 
   module Generation
+    def sh(cmd)
+      output = `#{cmd}`
+      raise "Command #{cmd.inspect} failed. Output:\n#{output}" unless $?.success?
+    end
+
     # Build an application by invoking the generator and going through the whole stack.
     def build_app(options = {})
       @prev_rails_app_class = Rails.app_class
@@ -89,7 +94,10 @@ module TestHelpers
       ENV["RAILS_ENV"] = "development"
 
       FileUtils.rm_rf(app_path)
-      FileUtils.cp_r(app_template_path, app_path)
+      sh("ruby " + __dir__ + "/../../bin/run_generator #{app_path}")
+      # puts "copy from #{app_template_path} to #{app_path}"
+      # ``
+      # FileUtils.cp_r(app_template_path, app_path)
 
       # Delete the initializers unless requested
       unless options[:initializers]
@@ -127,7 +135,7 @@ module TestHelpers
       Rails.application = @prev_rails_application if @prev_rails_application
       FileUtils.rm_rf(tmp_path)
       FileUtils.rm_rf(bootsnap_cache_path)
-      FileUtils.rm_rf(app_template_path)
+      FileUtils.rm_rf(app_path)
     end
 
     def default_database_configs
@@ -607,7 +615,7 @@ unless defined?(RAILS_ISOLATED_ENGINE)
     FileUtils.rm_rf(app_template_path)
     FileUtils.mkdir_p(app_template_path)
 
-    sh "rails new #{app_template_path} --skip-bundle --no-rc --quiet --force"
+    sh "ruby " + __dir__ + "/../../bin/run_generator #{app_template_path}"
     File.open("#{app_template_path}/config/boot.rb", "w") do |f|
       f.puts 'require "bootsnap/setup" if ENV["BOOTSNAP_CACHE_DIR"]'
       f.puts 'require "rails/all"'
