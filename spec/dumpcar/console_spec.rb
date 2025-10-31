@@ -17,11 +17,14 @@ RSpec.describe "Console", type: :aruba, pending: pending_rails_version? ? "This 
   end
 
   around(:each, type: :aruba) do |ex|
-    prepare_working_dir
-    if ENV["BUNDLE_GEMFILE"]
-      set_environment_variable("BUNDLE_GEMFILE", ENV["BUNDLE_GEMFILE"])
+    bundle_file = ENV["BUNDLE_GEMFILE"]
+    Bundler.with_unbundled_env do
+      prepare_working_dir
+      if bundle_file
+        set_environment_variable("BUNDLE_GEMFILE", bundle_file)
+      end
+      ex.run
     end
-    ex.run
   end
 
   describe ":dump" do
