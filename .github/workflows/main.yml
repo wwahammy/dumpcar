@@ -86,4 +86,4 @@ jobs:
       - name: Build and run dev container task
         uses: devcontainers/ci@v0.3
         with:
-          runCmd: echo "If we got here, the devcontainer built successfully!"
+          runCmd: echo "If we got here, the devcontainer built successfully"
